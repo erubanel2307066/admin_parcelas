@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Parcelas Admin{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-center text-xl font-bold">Administración de Parcelas</h1>
+    </header>
+    <div class="container mx-auto mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
