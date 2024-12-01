@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcelas</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Parcelas Registradas</h1>
+    <a href="/registro">Registrar Nueva Parcela</a>
+    <table>
+        <tr>
+            <th>Folio</th>
+            <th>Propietario</th>
+            <th>Medida</th>
+            <th>Colindancias</th>
+            <th>Documento</th>
+        </tr>
+        {% for parcela in parcelas %}
+        <tr>
+            <td>{{ parcela['folio'] }}</td>
+            <td>{{ parcela['propietario'] }}</td>
+            <td>{{ parcela['medida'] }}</td>
+            <td>{{ parcela['colindancias'] }}</td>
+            <td><a href="{{ parcela['documento'] }}" target="_blank">Ver Documento</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
